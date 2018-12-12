@@ -42,5 +42,7 @@ public class MainController implements Initializable {
 		kitchenHatchProgress.progressProperty().bindBidirectional(this.progressReporter.kitchenHatchProgressProperty());
 		waitersBusyIndicator.progressProperty().bindBidirectional(this.progressReporter.waitersBusyProperty());
 		cooksBusyIndicator.progressProperty().bind(this.progressReporter.cooksBusyProperty());
+
+		/* TODO create the cooks and waiters, pass the kitchen hatch and the reporter instance and start them */
 	}
 }

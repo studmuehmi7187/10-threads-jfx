@@ -84,7 +84,7 @@ The last call in the `run()` method, right before exiting, should be `progressRe
 
 ## Starting the threads
 
-There are 2 **TODO** items in the `MainActivity` class:
+There are 2 **TODO** items in the `MainController` class:
 
 At the first one you have to create an instance of your `KitchenHatchImpl` and assign it to the existing variable `kitchenHatch`.
 
@@ -98,8 +98,6 @@ The class `ProgressReporter` is given.
 It handles the interaction with the GUI elements mentioned above.
 If you're using multithreading in graphical applications you have to take care which thread is accessing the graphical elements.
 As this course is not meant to be an introduction to programming of graphical user interfaces (this is covered in the course GUI in the 4th semester) the required coding is already done and abstracted in the class `ProgressReporter`.
-
-The instance of `ProgressReporter` is constructed by a so called "Builder" (you already used one with Retrofit and GSON) in the class `MainActivity` so you don't have to care about it.
 
 The class has 3 methods you have to use:
 
