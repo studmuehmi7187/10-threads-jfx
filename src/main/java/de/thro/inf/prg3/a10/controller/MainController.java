@@ -2,6 +2,7 @@ package de.thro.inf.prg3.a10.controller;
 
 import de.thro.inf.prg3.a10.internals.displaying.ProgressReporter;
 import de.thro.inf.prg3.a10.kitchen.KitchenHatch;
+import de.thro.inf.prg3.a10.util.NameGenerator;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ProgressBar;
@@ -16,6 +17,7 @@ public class MainController implements Initializable {
 
 	private final ProgressReporter progressReporter;
 	private final KitchenHatch kitchenHatch;
+	private final NameGenerator nameGenerator;
 
 	@FXML
 	private ProgressIndicator waitersBusyIndicator;
@@ -30,6 +32,8 @@ public class MainController implements Initializable {
 	private ProgressBar orderQueueProgress;
 
 	public MainController() {
+		nameGenerator = new NameGenerator();
+
 		//TODO assign an instance of your implementation of the KitchenHatch interface
 		this.kitchenHatch = null;
 		this.progressReporter = new ProgressReporter(kitchenHatch, COOKS_COUNT, WAITERS_COUNT, ORDER_COUNT, KITCHEN_HATCH_SIZE);
