@@ -11,6 +11,8 @@ import de.thro.inf.prg3.a10.model.Order;
 
 public interface KitchenHatch {
 
+	void setOrder(Order o);
+
 	/**
 	 * Get the count how many meals can be placed in the hatch
 	 * @return max count
